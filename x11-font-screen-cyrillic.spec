@@ -12,8 +12,8 @@ BuildRequires: x11-font-util >= 1.0.0
 BuildRequires: x11-util-macros >= 1.0.1
 
 Conflicts: xorg-x11-cyrillic-fonts <= 6.9.0
-PreReq: mkfontdir
-PreReq: mkfontscale
+Requires: mkfontdir
+Requires: mkfontscale
 
 %description
 Xorg X11 font screen-cyrillic
