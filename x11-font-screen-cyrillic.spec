@@ -3,6 +3,7 @@ Version: 1.0.1
 Release: %mkrel 1
 Summary: Xorg X11 font screen-cyrillic
 Group: Development/X11
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: http://xorg.freedesktop.org
 Source: http://xorg.freedesktop.org/releases/individual/font/font-screen-cyrillic-%{version}.tar.bz2
 License: CHECK
