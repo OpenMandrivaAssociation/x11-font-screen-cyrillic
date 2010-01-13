@@ -1,6 +1,6 @@
 Name: x11-font-screen-cyrillic
-Version: 1.0.1
-Release: %mkrel 3
+Version: 1.0.2
+Release: %mkrel 1
 Summary: Xorg X11 font screen-cyrillic
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -23,8 +23,8 @@ Xorg X11 font screen-cyrillic
 %setup -q -n font-screen-cyrillic-%{version}
 
 %build
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir} --with-fontdir=%_datadir/fonts/cyrillic
+./configure --prefix=/usr --x-includes=%{_includedir}\
+	    --x-libraries=%{_libdir} --with-fontdir=%_datadir/fonts/cyrillic
 
 %make
 
