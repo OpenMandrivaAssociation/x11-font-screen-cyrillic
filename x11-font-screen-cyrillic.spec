@@ -10,7 +10,7 @@ License: MIT-like
 BuildArch: noarch
 
 BuildRequires: x11-font-util >= 1.0.0
-BuildRequires: x11-util-macros >= 1.0.1
+BuildRequires: x11-util-macros >= 1.0.2
 
 Conflicts: xorg-x11-cyrillic-fonts <= 6.9.0
 Requires: mkfontdir
