@@ -1,6 +1,6 @@
 Name: x11-font-screen-cyrillic
 Version: 1.0.4
-Release: 11
+Release: 12
 Summary: Xorg X11 font screen-cyrillic
 Group: Development/X11
 URL: http://xorg.freedesktop.org
