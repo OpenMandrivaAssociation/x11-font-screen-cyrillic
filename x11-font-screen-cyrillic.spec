@@ -1,33 +1,29 @@
 Name: x11-font-screen-cyrillic
-Version: 1.0.4
-Release: 14
+Version: 1.0.5
+Release: 1
 Summary: Xorg X11 font screen-cyrillic
 Group: Development/X11
-URL: http://xorg.freedesktop.org
-Source0: http://xorg.freedesktop.org/releases/individual/font/font-screen-cyrillic-%{version}.tar.bz2
+URL: https://xorg.freedesktop.org
+Source0: https://xorg.freedesktop.org/releases/individual/font/font-screen-cyrillic-%{version}.tar.xz
 License: MIT-like
 BuildArch: noarch
 BuildRequires: fontconfig
-
-BuildRequires: x11-font-util >= 1.0.0
-BuildRequires: x11-util-macros >= 1.0.2
-
-Conflicts: xorg-x11-cyrillic-fonts <= 6.9.0
-Requires: mkfontdir
-Requires: mkfontscale
+BuildRequires: pkgconfig(fontutil) >= 1.0.1
+BuildRequires: pkgconfig(xorg-macros) >= 1.1.5
+Requires(post,postun): mkfontscale
 
 %description
-Xorg X11 font screen-cyrillic
+Xorg X11 font screen-cyrillic.
 
 %prep
-%setup -q -n font-screen-cyrillic-%{version}
+%autosetup -p1 -n font-screen-cyrillic-%{version}
 
 %build
 %configure --with-fontdir=%{_datadir}/fonts/cyrillic
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 rm -f %{buildroot}%{_datadir}/fonts/cyrillic/fonts.dir
 rm -f %{buildroot}%{_datadir}/fonts/cyrillic/fonts.scale
 
